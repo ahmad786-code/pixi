@@ -159,6 +159,7 @@ ul {
     overflow-y: hidden;
 }
 
+
 .mangement-card {
     border-radius: 1.2rem;
     width: 33.333%;
@@ -381,4 +382,19 @@ ul {
     width: 100%;
     height: calc(100% - 60px);
     z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .mangement-card {
+        
+        width: 100%;
+        
+    }
 }
