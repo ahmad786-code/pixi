@@ -10,6 +10,7 @@
 :root {
     --light-pink: #ffe5ec;
     --dark-pink: #ff8fab;
+    --dark-pink-body: #e35270;
     /* Vibrant darker pink */
     --accent-pink: #fb6f92;
     /* Accent pink for CTAs and interactive elements */
@@ -23,7 +24,8 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--accent-pink);
+    background-color: var(--dark-pink-body);
+
     line-height: 1.6;
 
 }
@@ -41,15 +43,16 @@ ul {
 .header {
 
     background-image: url(./images/waves.png);
-
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
+    background-attachment: fixed; 
     position: relative;
     padding: 1rem 3rem;
     height: 90vh;
-
     z-index: 10;
 }
+
+ 
 
 .nav {
     display: flex;
@@ -58,10 +61,9 @@ ul {
 }
 
 .nav-links {
-    display: flex;
-    list-style-type: none;
+   
     flex: 1;
-    justify-content: flex-start;
+ 
 
 }
 
@@ -78,7 +80,7 @@ ul {
 }
 
 .logo {
-    flex: 5;
+    flex: 1;
     text-align: center;
 }
 
@@ -87,12 +89,14 @@ ul {
     width: auto;
 }
 
-.contact {
+
+
+.contact-btns {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .social {
@@ -110,6 +114,7 @@ ul {
     font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
+    cursor: pointer;
 }
 
 .text-box {
@@ -118,6 +123,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 100000;
 }
 
 .heading {
@@ -126,10 +132,7 @@ ul {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.1;
-    background: linear-gradient(var(--white-color), var(--dark-pink));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--white-color);
     padding-bottom: 2rem;
 }
 
@@ -144,9 +147,10 @@ ul {
 
 /* Mangment */
 .mangement {
-    padding: 5rem 3rem;
+    padding: 8rem 3rem;
     position: relative;
     overflow: hidden;
+    background-color: var(--dark-pink-body);
 
 }
 
@@ -154,6 +158,8 @@ ul {
 .card-wrapper {
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -162,9 +168,10 @@ ul {
 
 .mangement-card {
     border-radius: 1.2rem;
-    width: 33.333%;
+    width: 90%;
     background-color: var(--dark-pink);
     display: flex;
+    align-items: center;
     flex-direction: column;
 
 
@@ -196,8 +203,136 @@ ul {
     font-size: 1.5rem;
 }
 
+/* Contact Section */
+
+.contact-section {
+    padding: 7rem 3rem;
+   text-align: center;
+}
+
+.contact-heading {
+    text-align: center;
+    color: white; /* Change color as needed */
+    font-size: 2.8rem; /* Adjust size as needed */
+    overflow: hidden;
+}
+
+.with {
+    display: block;  
+    margin-top: -10px;
+    margin-right: -100px;
+}
+
+ 
+
+.contact {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+input {
+   max-width: 600px;
+   width: 600px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    border-bottom: 1px solid  #ccc;
+   padding: 2rem 0rem;
+   transition: all .5s;
+}
+
+input:focus {
+    border-bottom: 1px solid  #fff;
+}
+input[type="button"] {
+    width: inherit;
+    margin-top: 3rem;
+    border-bottom: none;
+    padding: .7rem 3rem;
+    background-color: var(--white-color);
+    color: var(--accent-pink);
+    text-decoration: none;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
 
 
+input::placeholder {
+    color: #ffffff;
+   
+ 
+}
+
+/* Breakponits */
+ 
+ 
+
+@media screen and (max-width: 768px) {
+    .text-box {
+      
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 100000;
+    }
+    .heading {
+        font-size: 2.5rem;
+        
+    }
+    .card-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .mangement-card {
+
+        width: 100%;
+
+    }
+
+    .logo,  .contact-btns {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        max-width: 350px;
+        width: 350px;
+         background-color: transparent;
+         outline: none;
+         border: none;
+         color: #ffffff;
+         border-bottom: 1px solid  #ffffff;
+        padding: 2rem 0rem;
+     }
+     
+}
+/* animations */
 .lines {
     position: absolute;
     top: 0;
@@ -375,7 +510,7 @@ ul {
 
 }
 
-#particles-js {
+#particles {
     position: absolute;
     top: 60px;
     left: 0;
@@ -384,64 +519,18 @@ ul {
     z-index: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .card-wrapper {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-    }
 
-    .mangement-card {
-        
-        width: 100%;
-        
-    }
+/* Star */
+
+
+.galaxy-wrapper {
+
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
- 
-
-
-@keyframes rotate {
-    0% {
-      transform: perspective(400px) rotateZ(0deg) rotateX(-20deg) rotateY(0);
-    }
-    100% {
-      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
-    }
-  }
-  .stars {
-    transform: perspective(500px);
-    transform-style: preserve-3d;
-    position: absolute;
-    bottom: 0;
-    perspective-origin: 100% 50%;
-    left: 50%;
-    animation: rotate 800s infinite linear;
-    z-index: -199;
-  }
-  
-  .star {
-    width: 2px;
-    height: 2px;
-    background: #dfdaf1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: 0 0 -100px;
-    transform: translate3d(0, 0, -100px);
-    backface-visibility: hidden;
-  }
-              .blink {
-                  -moz-animation: blinkx 1s forwards ease-in-out;
-                  -o-animation: blinkx 1s forwards ease-in-out;
-                  -webkit-animation: blinkx 1s forwards ease-in-out;
-                  animation: blinkx 1s forwards ease-in-out;
-              }
-  @keyframes blinkx{
-      0% , 100%{
-          opacity:1;
-      }
-      50%{
-          opacity:0;
-      }
-  }
