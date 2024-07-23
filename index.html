@@ -4,36 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/animation.css">
+
     <script src="https://unpkg.com/scrollreveal"></script>
-    
+
     <title>Pixiemgmt</title>
 </head>
 
 <body>
     <header class="header">
-         
-        <nav class="nav">
-            <ul class="nav-links">
+
+
+        <nav class="navbar">
+            <div class="logos">
+                <a class="logo-text" href="#">PixieMGMT</a>
+            </div>
+
+            <div class="img-logo">
+                <img src="images/logo.png" class="logo-img" alt="Logo">
+            </div>
+            <ul class="links">
+
                 <li>
-                    <a href="/index.html">PixieMGMT</a>
+                    <a class="social-btn" href="#">Social</a>
+                </li>
+                <li>
+                    <a class="contact-btn" href="#contact-section">Contact</a>
                 </li>
 
             </ul>
-            <div class="logo">
-                <a href="/index.html">
-                    <img class="logo-img" src="./images/logo.png" alt="Logo">
-                </a>
-            </div>
-            <div class="contact-btns">
-                <a href="#" class="contact-btn">contact</a>
-                <a href="#" class="social contact-btn">social</a>
+            <div class="toggle-btn">
+                <button type="button" class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
 
+
         <div class="text-box">
             <h1 class="heading">
-                <span class="heading-1">Creator Marketing Agency</span>
+
                 <span class="heading-1">Pixie MGMT</span>
             </h1>
             <a href="./about.html" class="contact-btn">Read More</a>
@@ -69,12 +83,12 @@
                             <h2 class="mangement-card-content-heading">Onlyfans Account Audit</h2>
                         </div>
                         <ul class="mangement-card-content-services">
-                            <li>You will have an account manager who will take care of you 24/7</li>
-                            <li>Onlyfans Chatter</li>
-                            <li>Guides to help you with content creation</li>
-                            <li>Fan management (refunds, recoveries,…)</li>
-                            <li>PPV + tip sales and upsell management</li>
-                            <li>General weekly audits and reports for social media and OnlyFans.</li>
+                            <li>YComplete audit of all your account performance, revenue, chats, and your account</li>
+                            <li>Audits to better understand where weaknesses lie and where potential exists</li>
+                            <li>Precise steps to turn these weaknesses into strengths and significantly increase your
+                                revenue with less time spent on them</li>
+                            <li>+ Social media audits to get the most out of your brand</li>
+
                         </ul>
                     </div>
                 </div>
@@ -85,12 +99,12 @@
                             <h2 class="mangement-card-content-heading">Account Growth & Onlyfans Marketing</h2>
                         </div>
                         <ul class="mangement-card-content-services">
-                            <li>You will have an account manager who will take care of you 24/7</li>
-                            <li>Onlyfans Chatter</li>
-                            <li>Guides to help you with content creation</li>
-                            <li>Fan management (refunds, recoveries,…)</li>
-                            <li>PPV + tip sales and upsell management</li>
-                            <li>General weekly audits and reports for social media and OnlyFans.</li>
+                            <li>Social media management for existing or new accounts (Instagram, Reddit, Twitter and
+                                many more).</li>
+                            <li> Daily Reddit promotion (with our automations we make sure to post there 24/7). </li>
+                            <li>We take care of your direct messages on social media</li>
+                            <li>We organize promotions like shoutouts, GGS and much more</li>
+
                         </ul>
                     </div>
                 </div>
@@ -109,15 +123,15 @@
                 <li></li>
             </ul>
 
-            
+
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact-section">
             <div class="contact-title">
                 <h1 class="contact-heading">
                     <span class="contact">CONTACT</span>
-                    <span class="with">WITH US</span>
-                  
+
+
                 </h1>
             </div>
             <form class="contact">
@@ -127,15 +141,42 @@
                 </div>
                 <div class="input-group">
                     <input type="text" placeholder="Phone">
+                    <input type="text" placeholder="OnlyFans">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Instagram">
+                    <input type="text" placeholder="TikTok">
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Twitter">
                     <input type="text" placeholder="Message">
                 </div>
                 <input type="button" value="Send">
             </form>
 
-           
+
         </section>
 
     </main>
+    <footer class="footer">
+        <p class="footer-text">Copyright © 2024 Pixie MGMT</p>
+    </footer>
+
+    <aside class="">
+        <button class="close-btn" id="cross-btn">
+            <i class="fas fa-close "></i>
+        </button>
+        <ul class="nav-links">
+
+            <li>
+                <a class="social-btn"  href="#">Social</a>
+            </li>
+            <li>
+                <a class="contact-btn"  id="cross-btn" href="#contact-section">Contact</a>
+            </li>
+
+        </ul>
+    </aside>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script.js"></script>

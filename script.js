@@ -1,3 +1,21 @@
+document.getElementById('nav-toggle').addEventListener('click', function() {
+    var asideElement = document.querySelector('aside');
+    asideElement.classList.toggle('active');
+});
+
+document.getElementById('cross-btn').addEventListener('click', function() {
+    var asideElement = document.querySelector('aside');
+    asideElement.classList.remove('active');
+});
+
+var linksToCloseAside = document.querySelectorAll('.nav-links a');
+linksToCloseAside.forEach(function(link) {
+    link.addEventListener('click', function() {
+        var asideElement = document.querySelector('aside');
+        asideElement.classList.remove('active');
+    });
+});
+ 
  
 
 ScrollReveal({ reset: true,scale: 1.50 });
@@ -125,11 +143,4 @@ function Circle() {
 
 
 
-document.querySelector('.menu-icon').addEventListener('click', function() {
-  const nav = document.querySelector('.nav');
-  if (nav.style.left === '0px') {
-      nav.style.left = '-100%';
-  } else {
-      nav.style.left = '0px';
-  }
-});
+ 
